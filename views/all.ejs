@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="web icon" href="/images/icon.png">
+    <title>All users - Mr kumar</title>
+  </head>
+  <body class="w-full bg-zinc-400 p-6 h-screen">
+    <a href="/create" class="px-4 py-2 rounded-md bg-black text-white ">Create new user</a>
+    <div class="main flex justify-start item-center  p-8">
+      <% if (users.length >= 1) { %>
+        <% users.forEach(function(user) { %>
+          <div class="w-66 m-4 p-2 rounded-md border">
+            <img src="<%= user.img %>" alt="<%= user.name %>" class="h-52 w-full rounded-md object-cover" />
+            <div class="p-4">
+              <h1 class="text-lg font-semibold"><%= user.name %></h1>
+              <p class="my-4 text-sm text-gray-600">Mail: <%= user.mail %></p>
+              <div class="buttons w-full flex justify-between items-center">
+              <a href="/update/<%= user.mail %>"
+                class="mt-2 mr-6 rounded-md bg-black px-2.5 py-1 text-md font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Update
+              </a>
+              <a href="/delete/<%= user.mail %>"
+                class="mt-2 ml-6 rounded-md bg-black px-2.5 py-1 text-md font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                delete
+            </a>
+          </div>
+            </div>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <h2 class="text-xl font-bold rounded-md bg-orange-700 text-white shadow-4">Nothing to see! Create new one</h2>
+      <% } %>
+    </div>
+  </body>
+</html>
+

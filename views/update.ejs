@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="web icon" href="/images/icon.png">
+    <title>Update user - Mr kumar</title>
+  </head>
+  <body>
+
+      
+    <section class="bg-zinc-400 w-full h-screen block m-auto p-8">
+        <div >
+    <a href="/" class="px-4 py-2 rounded-md bg-black text-white ">Show all users</a>
+
+          <div class="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
+            <div class="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
+              <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl">
+                Update Account
+              </h2>
+
+              <form action="/update" method="post">
+                <div class="space-y-5">
+                    <div>
+                        <label for="email" class="text-base font-medium text-gray-900">
+                          
+                         Email
+                        </label>
+                        <div class="mt-2">
+                          <input
+                          required
+                            class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                            type="email"
+                            placeholder="Email"
+                            id="email"
+                            readonly 
+                            value= <%=mail %>
+                            name="oldMail"
+                          />
+                        </div>
+                      </div>
+
+                  <div>
+                    <label for="name" class="text-base font-medium text-gray-900">
+                      
+                      Full Name
+                    </label>
+                    <div class="mt-2">
+                      <input
+                      required
+                        class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                        type="text"
+                        placeholder="Full Name"
+                        id="name"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                
+                  <div>
+                    <div class="flex items-center justify-between">
+                      <label
+                        for="imgadd"
+                        class="text-base font-medium text-gray-900"
+                      >
+                        
+                        img address
+                      </label>
+                    </div>
+                    <div class="mt-2">
+                      <input
+                      required
+                        class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                        type="text"
+                        placeholder="img add"
+                        id="imgadd"
+                        name="img"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      class="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
+                    >
+                      Update details    
+              </div>
+ <p class=" text-sm text-red-600 font-bold text-center bg-white rounded-md px-4 py-2 w-full "> Email is not support to change must be the same to find the user</p>
+            </div>
+            </form>
+          </div>
+          
+        </div>
+        </div>
+
+      </section>
+  </body>
+</html>

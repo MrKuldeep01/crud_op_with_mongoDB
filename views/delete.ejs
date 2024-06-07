@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>delete User - Mr kumar</title>
+    <link rel="web icon" href="/images/icon.png">
+  </head>
+  <body class="w-full h-screen bg-zinc-400 p-6">
+    <a href="/create" class="px-4 py-2 rounded-md bg-black text-white ">Create new user</a>
+    <a href="/" class="px-4 py-2 rounded-md bg-black text-white ">Show all users</a>
+    <div class="w-full h-[95vh] flex p-4"></div>
+          <div class="w-66 h-56 m-4 p-2 rounded-md border">
+            <img src="<%= deletedUser.img %>" alt="<%= deletedUser.name %>" class="h-52 w-full rounded-md object-cover" />
+            <div class="p-4">
+              <h1 class="text-lg font-semibold"><%= deletedUser.name %></h1>
+              <p class="mt-3 text-sm text-gray-600">Mail: <%= deletedUser.mail %></p>
+              
+            </div>
+          </div>
+        
+        <h2 class="text-xl font-bold rounded-md bg-orange-700 text-white shadow-4"> Deleted!</h2>
+    </div>
+  </body>
+</html>
+
