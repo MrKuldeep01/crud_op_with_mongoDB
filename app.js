@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const port = process.env.PORT || 3000;
 const userModel = require("./models/user.model");
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -47,6 +48,6 @@ app.get("/delete/:mail", async (req, res) => {
   res.render('delete',{deletedUser})
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
   console.log('chl bhai');
 });
